@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Age Checker</title>
+</head>
+
+<body>
+
+  <h2>Age Checker</h2><br>
+
+
+  <input type="text" id="username" placeholder=" Enter name "><br><br>
+  <input type="number" id="age" placeholder=" Enter age " maxlength="2"><br><br>
+  <button onclick="agechecker()">Check</button>
+
+
+  <p id="result"></p>
+
+  <script>
+    function agechecker() {
+      let name = document.getElementById("username").value;
+      let age = parseInt(document.getElementById("age").value) ;
+      let message = "";
+
+      if (age < 18) {
+        message = "Hello " + name + ", you are Minnor.";
+      }
+      else if (age < 60) {
+        message = "Hello " + name + ", you are Adult.";
+      }
+      else {
+        message = "Hello " + name + ", you are Senior Citizen.";
+      }
+
+      document.getElementById("result").innerText = message;
+    }
+  </script>
+</body>
+
+</html>
