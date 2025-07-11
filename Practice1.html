@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> temperature </title>
+</head>
+
+<body>
+
+    <h2>Temperature</h2><br>
+
+    <input type="number" id="temperature" placeholder=" Enter temperature "><br><br>
+    <button onclick="temperature()">Check</button>
+
+
+    <p id="result"></p>
+
+    <script>
+        function temperature() {
+            let temp = parseInt(document.getElementById("temperature").value);
+            let message = "";
+
+            if (temp < 20) {
+                message = "It's To Cold ";
+            }
+            else if (temp < 30) {
+                message = "Normal";
+            }
+            else {
+                message = " To Hot ";
+            }
+
+            document.getElementById("result").innerText = message;
+        }
+    </script>
+</body>
+
+</html>
