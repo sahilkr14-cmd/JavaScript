@@ -1,0 +1,9 @@
+<input type="text" onkeyup="liveTyping()" id="liveInput">
+<p id="showLive"></p>
+
+<script>
+    function liveTyping() {
+        let val = document.getElementById("liveInput").value;
+        document.getElementById("showLive").innerText = val;
+    }
+</script>
