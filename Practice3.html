@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h3>Calculate Average of 3 Subject and Give a Grade</h3>
+    <input type="number" id="Maths" placeholder="Enter Marks">
+    <input type="number" id="Science" placeholder="Enter Marks">
+    <input type="number" id="English" placeholder="Enter Marks">
+    <button onclick="Average()">Check Average</button>
+
+    <p id="result"></p>
+    <p id="result2"></p>
+
+    <script>
+        function Average() {
+            let a = parseInt(document.getElementById("Maths").value)
+            let b = parseInt(document.getElementById("Science").value)
+            let c = parseInt(document.getElementById("English").value)
+            let result
+
+            let sum = (a + b + c) / 3
+
+            if (sum > 90) result = "Grade A"
+            else if (sum > 70) result = "Grade B"
+            else if (sum > 50) result = "Grade C"
+            else if (sum < 50) result = "Grade D"
+
+            document.getElementById("result").innerText = result
+            document.getElementById("result2").innerText = sum
+
+        }
+
+    </script>
+
+</body>
+
+</html>
