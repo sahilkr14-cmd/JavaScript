@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h3>Calculator</h3><br>
+
+    <input type="number" id="num1" placeholder="Enter First Number"><br><br>
+    <input type="number" id="num2" placeholder="Enter Second Number"><br><br>
+    <button onclick="Calculator('+')">Addtion</button>
+    <button onclick="Calculator('-')">Substraction</button>
+    <button onclick="Calculator('*')">Multiplication</button>
+    <button onclick="Calculator('/')">Division</button>
+
+    <p id="result"></p>
+
+    <script>
+        function Calculator(sum) {
+            let n1 = parseInt(document.getElementById("num1").value)
+            let n2 = parseInt(document.getElementById("num2").value)
+            let result
+
+            if (sum === '+') result = n1 + n2
+            else if (sum === '-') result = n1 - n2
+            else if (sum === '*') result = n1 * n2
+            else if (sum === '/') result = n2 !== 0 ? n1 / n2 : "Not Divided By 0"
+
+            document.getElementById("result").innerText = result
+
+        }
+
+    </script>
+</body>
+
+</html>
