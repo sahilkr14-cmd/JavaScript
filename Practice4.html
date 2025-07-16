@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JS Hover Button</title>
+</head>
+
+<body>
+
+    <button id="hoverBtn"
+        style="padding: 15px 30px; background-color: green; color: white; font-size: 16px; border: none; display: flex; justify-content: center; "
+        onmouseover="enlarge()" onmouseout="resetSize()">
+        Hover Me
+    </button>
+
+    <script>
+        function enlarge() {
+            const btn = document.getElementById("hoverBtn");
+            btn.style.backgroundColor = "darkorange";
+            btn.style.transform = "scale(1.2)";
+            btn.style.transition = "0.3s";
+        }
+
+        function resetSize() {
+            const btn = document.getElementById("hoverBtn");
+            btn.style.backgroundColor = "green";
+            btn.style.transform = "scale(1)";
+        }
+    </script>
+
+</body>
+
+</html>
