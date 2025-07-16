@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img src="https://www.shutterstock.com/shutterstock/photos/159086927/display_1500/stock-photo-black-rowan-berries-on-branches-with-red-leaves-on-an-abstract-background-of-autumn-159086927.jpg"
+        alt="img" onmouseover="hover()" id="hover" style="width: 300px; height: 300px;" onmouseout="resetimg()">
+
+
+    <script>
+        function hover() {
+            document.getElementById("hover").src = "https://www.shutterstock.com/shutterstock/photos/1899493687/display_1500/stock-photo-great-white-shark-close-up-shot-1899493687.jpg"
+        }
+        function resetimg() {
+            document.getElementById("hover").src = "https://www.shutterstock.com/shutterstock/photos/159086927/display_1500/stock-photo-black-rowan-berries-on-branches-with-red-leaves-on-an-abstract-background-of-autumn-159086927.jpg"
+        }
+    </script>
+</body>
+
+</html>
