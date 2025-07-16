@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Card Hover</title>
+</head>
+
+<body>
+
+    <div id="card" onmouseover="hoverCard()" onmouseout="resetCard()"
+        style="width: 250px; height: 150px; background-color: #ddd; padding: 20px; transition: 0.3s;">
+        <h3 id="cardText">Hover Over This Card</h3>
+    </div>
+
+    <script>
+        function hoverCard() {
+            const card = document.getElementById("card");
+            const text = document.getElementById("cardText");
+            card.style.backgroundColor = "#333";
+            text.style.color = "#fff";
+            card.style.transform = "scale(1.05)";
+        }
+
+        function resetCard() {
+            const card = document.getElementById("card");
+            const text = document.getElementById("cardText");
+            card.style.backgroundColor = "#ddd";
+            text.style.color = "#000";
+            card.style.transform = "scale(1)";
+        }
+    </script>
+
+</body>
+
+</html>
