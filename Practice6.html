@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JS Hover Border</title>
+</head>
+<body>
+
+<button 
+  id="hoverBtn" 
+  style="padding: 15px 30px; background-color: teal; color: white; font-size: 16px; border: 2px solid transparent;"
+  onmouseover="addBorder()" 
+  onmouseout="removeBorder()"
+>
+  Hover Me
+</button>
+
+<script>
+  function addBorder() {
+    const btn = document.getElementById("hoverBtn");
+    btn.style.border = "2px solid red";
+    btn.style.cursor = "pointer";
+    btn.style.transition = "0.2s ease-in";
+  }
+
+  function removeBorder() {
+    const btn = document.getElementById("hoverBtn");
+    btn.style.border = "2px solid transparent";
+  }
+</script>
+
+</body>
+</html>
