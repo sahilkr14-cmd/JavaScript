@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <ul id="myList">
+    </ul>
+    <input type="text" id="itmes" placeholder="Add Items">
+    <button onclick="addItem()">Add Item</button>
+    <p id="result"></p>
+
+
+    <script>
+        function addItem() {
+            const input = document.getElementById("itmes").value;
+            const li = document.createElement("li");
+            li.innerText = input
+            document.getElementById("myList").appendChild(li);
+
+            document.getElementById("itmes").value = "";
+            document.getElementById("result").innerText = "";
+        }
+    </script>
+
+</body>
+
+</html>
