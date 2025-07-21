@@ -1,0 +1,38 @@
+Take username/password in input → if both are correct then only allow login
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+
+<body>
+    <h3>Login Check</h3>
+
+    <input type="text" id="username" placeholder="Enter Your Username">
+    <input type="password" id="password" placeholder="Enter Your Password"><br><br>
+    <button onclick="Check()">Login</button>
+    <p id="result"></p>
+
+    <script>
+        let message = ""
+        function Check() {
+            const value = "sahil@14"
+            const value2 = "sahil@21"
+            const name = document.getElementById("username").value
+            const pass = document.getElementById("password").value
+            if (name === value && pass === value2) {
+                message = "You Are Loged In"
+            }
+            else {
+                message = "Enter Correct Username and Password"
+            }
+            document.getElementById("result").innerText = message
+        }
+    </script>
+</body>
+
+</html>
