@@ -1,0 +1,26 @@
+Have a "remove last item" button that removes the last item from the pop() <br><br>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="RemoveEle()">Remove</button>
+    <p id="result"></p>
+
+    <script>
+        let name = ["Ishaan", " Rahul", " Ramesh",  " Shubham "]
+        function RemoveEle() {
+            name.pop()
+            document.getElementById("result").innerText = name
+
+        }
+    </script>
+</body>
+
+</html>
