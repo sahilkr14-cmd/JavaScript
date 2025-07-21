@@ -1,0 +1,38 @@
+Take 3 inputs → and Give Output the maximum number
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Find Maximum Number</h3>
+    <input type="number" id="no1" placeholder="Enter No1">
+    <input type="number" id="no2" placeholder="Enter No2">
+    <input type="number" id="no3" placeholder="Enter No3"><br><br>
+    <button onclick="Check()">Total</button>
+    <p id="result"></p>
+</body>
+<script>
+    let message = ""
+    function Check() {
+        const a = parseInt(document.getElementById("no1").value)
+        const b = parseInt(document.getElementById("no2").value)
+        const c = parseInt(document.getElementById("no3").value)
+        if (a > b && a > c) {
+            message = `Largest No is ${a}`
+        }
+        else if (b > a && b > c) {
+            message = `Largest No is ${b}`
+        } else {
+            message = `Largest No is ${c}`
+        }
+        document.getElementById("result").innerText = message
+    }
+</script>
+
+</html>
