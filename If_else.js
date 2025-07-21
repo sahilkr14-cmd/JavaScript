@@ -1,4 +1,6 @@
-let age = 20
+
+let age = 20;
+
 if (age >= 20) {
     console.log("You can vote!");
 } else {

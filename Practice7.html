@@ -12,9 +12,9 @@
 
     <script>
         function addItem() {
-            const input = document.getElementById("itmes").value;
+            const add = document.getElementById("itmes").value;
             const li = document.createElement("li");
-            li.innerText = input
+            li.innerText = add
             document.getElementById("myList").appendChild(li);
 
             document.getElementById("itmes").value = "";
