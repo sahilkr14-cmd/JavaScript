@@ -1,0 +1,61 @@
+Get username/password from user, store in array, and check on login attempt. <br><br>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login With Array</title>
+</head>
+<body>
+
+  <h3>Register</h3>
+  <input type="text" id="regUser" placeholder="Create Username">
+  <input type="password" id="regPass" placeholder="Create Password">
+  <button onclick="register()">Register</button>
+
+  <h3>Login</h3>
+  <input type="text" id="logUser" placeholder="Enter Username">
+  <input type="password" id="logPass" placeholder="Enter Password">
+  <button onclick="login()">Login</button>
+
+  <p id="message"></p>
+
+  <script>
+    let users = [];
+
+    function register() {
+      const user = document.getElementById("regUser").value;
+      const pass = document.getElementById("regPass").value;
+
+      if (user && pass) {
+        users.push({ username: user, password: pass });
+        document.getElementById("message").innerText = " Registered successfully!";
+      } else {
+        document.getElementById("message").innerText = " Please enter username & password to register!";
+      }
+
+      document.getElementById("regUser").value = "";
+      document.getElementById("regPass").value = "";
+    }
+
+    function login() {
+      const logUser = document.getElementById("logUser").value;
+      const logPass = document.getElementById("logPass").value;
+
+      const found = users.find(function (u) {
+        return u.username === logUser && u.password === logPass;
+      });
+
+      if (found) {
+        document.getElementById("message").innerText = " Login successful!";
+      } else {
+        document.getElementById("message").innerText = " Invalid Username and Password";
+      }
+
+      document.getElementById("logUser").value = "";
+      document.getElementById("logPass").value = "";
+    }
+  </script>
+
+</body>
+</html>
