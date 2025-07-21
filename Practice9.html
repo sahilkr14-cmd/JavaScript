@@ -1,0 +1,47 @@
+<!-- Adding + showing items from input to array -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Item Adder</title>
+</head>
+
+<body>
+
+    <h2>Add Items to the List</h2>
+
+    <input type="text" id="itemInput" placeholder="Enter item name">
+    <button onclick="addItem()">Add Item</button>
+
+    <ul id="itemList"></ul>
+
+    <script>
+        let items = [];
+
+        function addItem() {
+            const input = document.getElementById("itemInput");
+            const value = input.value.trim();
+
+            if (value === "") {
+                alert("Please enter something!");
+                return;
+            }
+
+            items.push(value);
+
+            document.getElementById("itemList").innerHTML = "";
+
+            items.forEach(function (item) {
+                const li = document.createElement("li");
+                li.innerText = item;
+                document.getElementById("itemList").appendChild(li);
+            });
+
+            input.value = "";
+        }
+    </script>
+
+</body>
+
+</html>
