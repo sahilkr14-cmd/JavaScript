@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Enter 3 Numbers and find Min and Max</h3>
+
+    <input type="text" id="num1" placeholder="Number 1">
+    <input type="text" id="num2" placeholder="Number 2">
+    <input type="text" id="num3" placeholder="Number 3">
+    <button onclick="max()">Check</button>
+    <p id="output"></p>
+
+    <script>
+        function max() {
+            let n1 = parseInt(document.getElementById("num1").value)
+            let n2 = parseInt(document.getElementById("num2").value)
+            let n3 = parseInt(document.getElementById("num3").value)
+
+            nums = [n1, n2, n3]
+
+            nums.sort(function (a, b) {
+                return a - b
+            })
+
+            let smaller = nums[0]
+            let higher = nums[nums.length - 1]
+
+            document.getElementById("output").innerText = `MIN : ${smaller} | | MAX : ${higher}`
+        }
+    </script>
+</body>
+
+</html>
