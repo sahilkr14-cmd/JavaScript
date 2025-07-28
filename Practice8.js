@@ -6,3 +6,11 @@ for (let i = 1; i<scores.length; i++){
         console.log(scores[i])
     }
 }
+
+// More Shorter
+
+scores.forEach(function(score){
+    if (score > 50){
+        console.log(score)
+    }
+})
